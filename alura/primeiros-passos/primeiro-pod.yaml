@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: meu-primeiro-pod-declarativo
+spec:
+    containers:
+        - name: vitao-containers
+          image: nginx:latest

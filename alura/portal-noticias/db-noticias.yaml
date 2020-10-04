@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: db-noticias
+    labels: 
+        app: db-noticias
+spec:
+    containers:
+        - name: vitao-containers-db
+          image: aluracursos/mysql-db:1
+          ports:
+            - containerPort: 3306
+          envFrom:
+            - configMapRef:
+                name: db-configmap
+           # agora esta no db-configmap 
+#          env:
+#            - name: "MYSQL_ROOT_PASSWORD"
+#              value: "q1w2e3r4"
+#            - name: "MYSQL_DATABASE"
+#              value: "empresa"
+#            - name: "MYSQL_PASSWORD"
+#              value: "q1w2e3r4"
+      

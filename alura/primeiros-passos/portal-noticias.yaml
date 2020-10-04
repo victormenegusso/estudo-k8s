@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: portal-noticiais
+spec:
+    containers:
+        - name: vitao-containers
+          image: aluracursos/portal-noticias:1
